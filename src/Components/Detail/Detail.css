@@ -1,251 +1,178 @@
-    /* Container and Wrapper */
-    .item-detail-container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 40px 16px;
-        padding-top: 20px;
-        width: 100%;
-        height: 100%;
-        margin-bottom: 50px;
-    }
-    
+/* Container and Wrapper */
+.item-detail-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 16px;
+    padding-top: 20px;
+    width: 100%;
+    height: 100%;
+    margin-bottom: 50px;
+}
+
+.item-detail-wrapper {
+    display: flex;
+    flex-direction: column;
+    max-width: 960px; /* Adjusted from 96000px to 960px */
+    width: 100%;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.1);
+}
+
+@media (min-width: 640px) {
     .item-detail-wrapper {
-        display: flex;
-        flex-direction: column;
-        max-width: 96000px;
-        width: 1000px;
-        box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.1);
-    }
-    
-    @media (min-width: 640px) {
-        .item-detail-wrapper {
         flex-direction: row;
-        }
     }
-    
-    /* Image Section */
-    .item-image-container {
-        background-color: black;
-        width: 1000px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        max-height: 650px;
-        position: relative;
-    }
+}
 
-    
-.back-button-container {
-    margin-bottom: 20px;
+/* Image Section */
+.item-image-container {
+    background-color: black;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-height: 650px;
+    position: relative;
+}
 
-  }
-  
-  .back-button {
-    background-color: #f0f0f0;
-    color: #333;
-    border: 1px solid #ddd;
+.back-button-inside-image {
+    position: absolute;
+    top: 20px; /* Adjusted from 90px to 20px */
+    left: 20px; /* Adjusted from 40px to 20px */
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+    color: white;
+    border: none;
     padding: 10px 15px;
     border-radius: 5px;
-    cursor: pointer;
     font-size: 16px;
-  }
-  
-  .back-button-inside-image {
-    position: absolute; /* Position the button absolutely within the container */
-    top: 90px; /* Adjust vertical position */
-    left: 40px; /* Adjust horizontal position */
-    background-color: rgb(0, 0, 0); /* Semi-transparent background */
-    color: white; /* White text for visibility */
-    border: none; /* Remove border */
-    padding: 10px 15px; /* Add padding for better appearance */
-    border-radius: 5px; /* Slightly rounded corners */
-    font-size: 16px; /* Adjust font size */
-    cursor: pointer; /* Pointer cursor on hover */
-    z-index: 1; /* Ensure it appears on top of the image */
-    font-size: 20px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.back-button-inside-image:hover {
+    background-color: rgba(255, 255, 255, 0.9);
+    color: black;
+}
+
+.item-image {
+    object-fit: contain;
+    width: 100%;
+    max-height: 650px;
+}
+
+/* Item Info Section */
+.item-info-container {
+    padding: 16px;
+    width: 100%;
+}
+
+.item-price-share {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+    padding: 8px;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.1);
+}
+
+.item-price {
+    font-size: 24px;
     font-weight: bold;
-    position: fixed;
-  }
-  
-  .back-button-inside-image:hover {
-    background-color: rgba(255, 255, 255, 0.9); /* Darker background on hover */
+}
+
+.icons-container {
+    display: flex;
+    gap: 12px;
+}
+
+.icon {
+    color: #6b7280;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.item-details {
+    padding: 8px;
+    margin-bottom: 16px;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.1);
+}
+
+.item-meta,
+.item-title,
+.item-location,
+.item-date {
+    color: #4b5563;
+    margin-bottom: 8px;
+}
+
+.item-location {
     color: black;
+    font-weight: bold;
+    font-size: 20px;
+}
 
-  }
-  
-
-  .back-button:hover {
-    background-color: #e0e0e0;
+.item-category {
     color: black;
-  }
-  
-    
-    .item-image {
-        object-fit: contain;
-        width: 100%;
-        max-height: 650px;
-    }
-    
-    /* Item Info Section */
-    .item-info-container {
-        padding: 16px;
-        width: 100%;
-    }
-    
-    .item-price-share {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-bottom: 16px;
-        padding: 8px;
-        box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.1);
-    }
-    
-    .item-price {
-        font-size: 24px;
-        font-weight: bold;
-    }
-    
-    .icons-container {
-        display: flex;
-        gap: 12px;
-        width: 100px;
-        height: 50px;
-    }
-    
-    .icon {
-        color: #6b7280;
-        font-size: 20px;
-        cursor: pointer;
-    }
-    
-    .item-details {
-        padding: 8px;
-        margin-bottom: 16px;
-        box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.1);
-    }
-    
-    .item-meta,
-    .item-title,
-    .item-location,
-    .item-date {
-        color: #4b5563;
-        margin-bottom: 8px;
-    }
+    font-weight: bold;
+    font-size: 20px;
+}
 
-    .item-location{
-        color: black;
-        font-weight: bold;
-        font-size: 20px;
+.title {
+    color: black;
+    font-weight: bold;
+    font-family: sans-serif;
+    font-size: 30px;
+}
 
-    }
+.item-price {
+    color: black;
+    font-weight: bold;
+    font-size: 40px;
+}
 
-    .item-category{
-        color: black;
-        font-weight: bold;
-        font-size: 20px;
-    }
+/* Seller Section */
+.seller-details {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 16px;
+    padding: 8px;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.1);
+}
 
-    .title{
-        color: black;
-        font-weight: bold;
-        font-family: sans-serif;
-        font-size: 30px;
-    }
+.seller-name {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
 
-    .item-price{
-        color: black;
-        font-weight: bold;
-        font-size: 40px;
-    }
-    
-    .item-brand {
-        font-weight: bold;
-    }
-    
-    /* Seller Section */
-    .seller-details {
-        display: flex;
-        align-items: center;
-        margin-bottom: 16px;
-        padding: 8px;
-        box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.1);
-    }
-    
-    .seller-avatar {
-        background-color: #d1d5db;
-        border-radius: 50%;
-        height: 64px;
-        width: 64px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-right: 16px;
-    }
-    
-    .seller-image {
-        border-radius: 50%;
-        height: 100%;
-        width: 100%;
-    }
-    
-    .seller-name {
-        font-weight: bold;
-        margin-bottom: 4px;
-    }
-    
-    .seller-phone {
-        font-weight: bold;
-    }
-    
-    /* Posted Section */
-    .item-posted {
-        margin-bottom: 16px;
-        padding: 8px;
-        box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.1);
-    }
-    
-    .item-posted h2 {
-        font-weight: bold;
-    }
-    
-    .make-deal-button {
-        background-color: #1f2937;
-        color: white;
-        padding: 12px;
-        font-size: 16px;
-        text-align: center;
-        border: none;
-        cursor: pointer;
-        width: 100%;
-        margin-bottom: 16px;
-        box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.1);
-    }
-    
-    .make-deal-button:hover {
-        background-color: #374151;
-    }
+.seller-phone {
+    font-size: 20px;
+    margin-top: 10px;
+}
 
-    .icon{
-        width: 60px;
-        height: 30px;
-    }
+/* Action Button */
+.make-deal-button {
+    background-color: #1f2937;
+    color: white;
+    padding: 12px;
+    font-size: 16px;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom: 16px;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.1);
+}
 
-    .icon:hover{
-        background-color: rgb(0, 0, 0);
-        color: white;
-    }
+.make-deal-button:hover {
+    background-color: #374151;
+}
 
+.icon {
+    width: 60px;
+    height: 30px;
+}
 
-    .seller-name {
-        font-size: 20px;
-        margin-bottom: 10px; /* Add spacing below the name */
-        max-width: 150px;
-      }
-      
-    .seller-phone {
-        font-size: 20px;
-        margin-top: 10px; /* Optional: Add spacing above the phone */
-      }
-      
+.icon:hover {
+    background-color: rgb(0, 0, 0);
+    color: white;
+}

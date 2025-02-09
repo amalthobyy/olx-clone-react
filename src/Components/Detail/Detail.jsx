@@ -3,7 +3,7 @@ import './Detail.css';
 import { FaShareAlt, FaHeart } from "react-icons/fa";
 import { useNavigate } from 'react-router-dom';
 
-const Detail = () => {
+const Detail = ({ ad }) => {
     const navigate = useNavigate()
 
     const handleBack = () => {
@@ -43,9 +43,9 @@ const Detail = () => {
 
           {/* Item Details */}
           <div className="item-details">
-            <p className="item-title">
+            <div className="item-title">
               {<h2 className="title">{ad.title} </h2>|| "N/A"} - {ad.description || "N/A"}
-            </p>
+            </div>
             <p className="item-category">
               <strong>Category:</strong> {ad.category || "N/A"}
             </p>

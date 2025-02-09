@@ -1,0 +1,35 @@
+.body{
+    padding-top: 200px;
+    padding-bottom: 200px;
+}
+
+/* Container */
+.recommendations-container {
+    width: 90%;
+    margin: 0 auto;
+    font-family: Arial, sans-serif;
+}
+
+.recommendations-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Card Wrapper */
+.card-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* Featured Tag */
+.featured-tag {
+    display: inline-block;
+    background-color: #ffd700;
+    color: #333;
+    font-weight: bold;
+    padding: 4px 8px;
+    font-size: 12px;
+    margin-bottom: 5px;
+}
