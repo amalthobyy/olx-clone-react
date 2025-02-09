@@ -1,0 +1,228 @@
+@import url('https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css');
+
+.navbar {
+    background-color: rgb(234, 234, 234);
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+    padding: 0 20px;
+    box-sizing: border-box;
+    flex-wrap: wrap;  /* Ensures items wrap properly on smaller screens */
+}
+
+.logo img {
+    height: 50px;
+    width: auto;
+}
+
+.location input {
+    width: 250px;
+    border: 1px solid black;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.search {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    min-width: 300px;
+    max-width: 600px;
+}
+
+.search input {
+    flex-grow: 1;
+    border: 1px solid black;
+    padding: 5px;
+    border-radius: 5px;
+    min-width: 150px;
+}
+
+.search button {
+    background-color: black;
+    border: none;
+    margin-left: 10px;
+    padding: 5px 10px;
+}
+
+.search img {
+    width: 25px;
+    height: 25px;
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.nav-right h3 {
+    margin: 0;
+    font-size: 16px;
+}
+
+
+.comment {
+    width: 55px; /* Adjust this to match other icons */
+    height: 70px; /* Same as width */
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+.bell,
+.profile {
+    width: 35px;
+    height: auto;
+    min-width: 35px; /* Prevents shrinking */
+    cursor: pointer;
+}
+
+.profile-container {
+    position: relative;
+}
+
+.dropdown {
+    display: none;
+    position: absolute;
+    top: 50px;
+    right: 0;
+    background-color: white;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    z-index: 10;
+    padding: 10px;
+    min-width: 120px;
+}
+
+.profile-container:hover .dropdown {
+    display: block;
+}
+
+.logout-btn {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 5px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+}
+
+.logout-btn:first-child {
+    background-color: #ff6b6b;
+}
+
+.logout-btn:first-child:hover {
+    background-color: #e63946;
+}
+
+.logout-btn:last-child {
+    background-color: #007bff;
+}
+
+.logout-btn:last-child:hover {
+    background-color: #0056b3;
+}
+
+.sell {
+    display: flex;
+    align-items: center;
+}
+
+.selbtn {
+    height: 45px;
+    width: 110px;
+    border-top: 5px solid #23E5DB;
+    border-bottom: 5px solid #3A77FF;
+    border-left: 5px solid #FFCE32;
+    border-right: 5px solid #3A77FF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 10px;
+    border-radius: 30px;
+    font-size: larger;
+    font-weight: 600;
+    color: #002F34;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.selbtn:hover {
+    transform: scale(1.05);
+}
+
+.under {
+    height: 5px;
+    background-color: white;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%; /* Ensures proper alignment */
+    margin: 0; /* Removes any extra spacing */
+  }
+  
+
+/* Fix alignment issues on smaller screens */
+@media (max-width: 992px) {
+    .navbar {
+        flex-direction: column;
+        height: auto;
+        padding: 10px;
+    }
+
+    .search {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .nav-right {
+        flex-direction: row;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .comment,
+    .bell,
+    .profile {
+        width: 40px;
+        height: 40px;
+        min-width: 40px;
+    }
+}
+
+/* Mobile screens */
+@media (max-width: 576px) {
+    .nav-right {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .sell {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .selbtn {
+        width: 90px;
+        height: 40px;
+        font-size: 14px;
+    }
+
+    .comment,
+    .bell,
+    .profile {
+        width: 35px;
+        height: 35px;
+    }
+}
+

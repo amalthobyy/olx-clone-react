@@ -1,0 +1,226 @@
+/* Wrapper for Centering */
+.ad-details-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f3f4f6; /* Light background for contrast */
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
+  /* Form Container */
+  .ad-details-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    background-color: #ffffff; /* Clean white background */
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* Soft shadow for depth */
+    max-width: 600px;
+    width: 100%;
+    font-family: 'Poppins', sans-serif; /* Modern font */
+    box-sizing: border-box;
+    animation: fadeIn 0.3s ease-in-out; /* Smooth fade-in effect */
+  }
+  
+  /* Smooth Fade-in Animation */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Form Section Styling */
+  .ad-form-section {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding-top: 20px;
+  }
+  
+  .ad-form-section label {
+    font-weight: bold;
+    color: #111827; /* Darker text for contrast */
+    font-size: 1rem;
+    margin-bottom: 0.2rem;
+    text-transform: capitalize;
+  }
+  
+  /* Input and Select Styling */
+  .ad-form-input,
+  .ad-form-textarea,
+  .ad-form-select {
+    width: 100%;
+    padding: 0.85rem;
+    font-size: 1rem;
+    border: 1px solid #d1d5db;
+    border-radius: 0.5rem;
+    outline: none;
+    box-sizing: border-box;
+    background-color: #f9fafb;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .ad-form-input:hover,
+  .ad-form-textarea:hover,
+  .ad-form-select:hover {
+    background-color: #f1f5f9; /* Slight hover background change */
+  }
+  
+  .ad-form-input:focus,
+  .ad-form-textarea:focus,
+  .ad-form-select:focus {
+    border-color: #000000; /* Focus blue border */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  }
+  
+  .ad-form-textarea {
+    resize: vertical;
+    min-height: 100px;
+  }
+  
+  /* Error Messages */
+  .error {
+    color: #d32f2f; /* Red for error */
+    font-size: 0.875rem;
+    margin-top: -0.2rem;
+  }
+  
+  /* Image Upload Section */
+  .image-upload-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+  }
+  
+  .image-upload-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 8rem;
+    height: 8rem;
+    border: 2px dashed #d1d5db;
+    border-radius: 0.5rem;
+    font-size: 2rem;
+    color: #6b7280;
+    cursor: pointer;
+    background-color: #ffffff;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+  }
+  
+  .image-upload-icon:hover {
+    border-color: #2563eb; /* Change border color on hover */
+    background-color: #f3f4f6;
+  }
+  
+  .hidden-file-input {
+    display: none;
+  }
+  
+  .image-preview {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #d1d5db;
+    border-radius: 0.5rem;
+    width: 100%;
+    max-width: 12rem;
+    height: auto;
+    overflow: hidden;
+  }
+  
+  .preview-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 0.5rem;
+  }
+  
+  /* Submit Button */
+  .submit {
+    width: 100%;
+    padding: 0.85rem;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #000000;
+    border-radius: 0.5rem;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-top: 20px;
+  }
+  
+  .back-button-inside-image {
+    position: absolute; /* Position the button absolutely within the container */
+    top: 90px; /* Adjust vertical position */
+    left: 80px; /* Adjust horizontal position */
+    background-color: rgb(0, 0, 0); /* Semi-transparent background */
+    color: white; /* White text for visibility */
+    border: none; /* Remove border */
+    padding: 10px 15px; /* Add padding for better appearance */
+    border-radius: 5px; /* Slightly rounded corners */
+    font-size: 16px; /* Adjust font size */
+    cursor: pointer; /* Pointer cursor on hover */
+    z-index: 1; /* Ensure it appears on top of the image */
+    font-size: 20px;
+    font-weight: bold;
+    position: fixed;
+  }
+  
+  .back-button-inside-image:hover {
+    background-color: rgba(255, 255, 255, 0.9); /* Darker background on hover */
+    color: black;
+  
+  }
+  
+  
+  .back-button:hover {
+    background-color: #e0e0e0;
+    color: black;
+  }
+  
+  
+  .submit:hover {
+    background-color: #8b8b8b; /* Slightly darker blue on hover */
+    color: black;
+    transform: translateY(-2px); /* Hover lift effect */
+  }
+  
+  .submit:disabled {
+    background-color: #9ca3af; /* Disabled state */
+    cursor: not-allowed;
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 768px) {
+    .ad-details-container {
+      padding: 1.5rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .ad-details-container {
+      padding: 1rem;
+    }
+  
+    .ad-form-section label {
+      font-size: 0.875rem;
+    }
+  
+    .submit {
+      font-size: 0.875rem;
+      padding: 0.75rem;
+    }
+  }
+  
